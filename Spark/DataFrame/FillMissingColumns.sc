@@ -1,5 +1,5 @@
 
-/// Replacec missing DataFrame columns with null
+/// Replacec missing DataFrame columns with null. Used to prepare DataFrame vertices for GraphFrame
 def fillMissingColumns(myCols: Set[String], allCols: Set[String]) = {
   allCols.toList.map(x => x match {
     case x if myCols.contains(x) => col(x)
